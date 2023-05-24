@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unstable Element</title>
+  <style>
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #ddd;
+    }
+
+    .unstable-element {
+      position: relative;
+      animation: unstable-animation 2s infinite alternate;
+    }
+
+    @keyframes unstable-animation {
+      0% {
+        opacity: 1;
+        left: 0;
+      }
+
+      50% {
+        opacity: 0.5;
+        left: 50px;
+      }
+
+      100% {
+        opacity: 1;
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="not-present-in-dom.html">Not Present in DOM</a></li>
+    <li><a href="not-present-in-ui.html">Not Present in UI</a></li>
+    <li><a href="unstable-element.html">Unstable Element</a></li>
+    <li><a href="disabled-element.html">Disabled Element</a></li>
+    <li><a href="event-receiving-element.html">Event Receiving Element</a></li>
+    <li><a href="xhrrequest.html">XHR Element</a></li>
+  </ul>
+  
+  <h2>Unstable Element</h2>
+  <div class="unstable-element">This element is unstable but present in the UI and DOM.</div>
+
+  <marquee>This is basic example of marquee</marquee>
+  <br>
+  
+  <marquee direction = "up">The direction of text will be from bottom to top.</marquee>
+</body>
+</html>
+

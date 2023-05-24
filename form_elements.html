@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #ddd;
+    }
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    /* #result {
+      margin-top: 20px;
+      font-size: 18px;
+    } */
+  </style>
+  <title>Disabled Element</title>
+</head>
+<body>
+  <h2>Element</h2>
+  <ul class="navbar">
+    <li><a href="not-present-in-dom.html">Not Present in DOM</a></li>
+    <li><a href="not-present-in-ui.html">Not Present in UI</a></li>
+    <li><a href="unstable-element.html">Unstable Element</a></li>
+    <li><a href="disabled-element.html">Disabled Element</a></li>
+    <li><a href="event-receiving-element.html">Event Receiving Element</a></li>
+    <li><a href="xhrrequest.html">XHR Element</a></li>
+  </ul>
+  <br>
+  <div class="container">
+    <input type="tel" id="name" placeholder="Enter your house">
+    <button onclick="displayInput()">Submit</button>
+    <div id="result"></div>
+  </div>
+  <script>
+    function displayInput() {
+      var input = document.getElementById("name").value;
+      var result = document.getElementById("result");
+      result.innerHTML = input;
+    }
+  </script>
+</body>
+</html>

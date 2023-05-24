@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #ddd;
+    }
+  </style>
+  <title>Disabled Element</title>
+</head>
+<body>
+  <h2>Disabled Element</h2>
+  <ul class="navbar">
+    <li><a href="not-present-in-dom.html">Not Present in DOM</a></li>
+    <li><a href="not-present-in-ui.html">Not Present in UI</a></li>
+    <li><a href="unstable-element.html">Unstable Element</a></li>
+    <li><a href="disabled-element.html">Disabled Element</a></li>
+    <li><a href="event-receiving-element.html">Event Receiving Element</a></li>
+    <li><a href="xhrrequest.html">XHR Element</a></li>
+  </ul>
+  <br>
+  <input type="text" id="disabledElement" disabled>
+</body>
+</html>

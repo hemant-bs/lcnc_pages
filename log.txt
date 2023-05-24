@@ -1,0 +1,93 @@
+[2023-05-19 15:30:12.387] [info]  Replay Action is called =================================
+[2023-05-19 15:30:12.393] [info]  Replay Action meta data shared  =================================
+[2023-05-19 15:30:12.395] [info]  Replay Action process is called  =================================
+[2023-05-19 15:30:39.584] [info]  { status: 'passed', stepName: 'Go to https://k8s-mobile.bsstag.com/' }
+[2023-05-19 15:30:40.000] [info]  {
+  stepName: 'User action click occured',
+  locator: 'xpath',
+  path: '//UL[@id="primary-menu"]/LI[5]/A[1]'
+}
+[2023-05-19 15:31:02.060] [error] {
+  status: 'failed',
+  error: '{"error":"An error occurred while running .click() command on <//UL[@id=\\"primary-menu\\"]/LI[5]/A[1]>: timeout: Timed out receiving message from renderer: 20.000\\n  (Session info: chrome=113.0.5672.126)","message":"An error occurred while running .click() command on <//UL[@id=\\"primary-menu\\"]/LI[5]/A[1]>: timeout: Timed out receiving message from renderer: 20.000\\n  (Session info: chrome=113.0.5672.126)","stack":"Error\\n    at D.execute (/Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:4032825)\\n    at /Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6653173"}',
+  stepName: 'User action click occured'
+}
+[2023-05-19 15:31:02.062] [error] {
+  status: 'failed',
+  error: {
+    error: 'An error occurred while running .click() command on <//UL[@id="primary-menu"]/LI[5]/A[1]>: timeout: Timed out receiving message from renderer: 20.000\n' +
+      '  (Session info: chrome=113.0.5672.126)',
+    message: 'An error occurred while running .click() command on <//UL[@id="primary-menu"]/LI[5]/A[1]>: timeout: Timed out receiving message from renderer: 20.000\n' +
+      '  (Session info: chrome=113.0.5672.126)',
+    stack: 'Error\n' +
+      '    at D.execute (/Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:4032825)\n' +
+      '    at /Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6653173'
+  },
+  stepName: 'User action click occured'
+}
+[2023-05-19 15:31:12.236] [error] {
+  status: 'failed',
+  error: '{}',
+  stepName: 'User action click occured'
+}
+[2023-05-19 15:31:12.240] [error] {
+  status: 'failed',
+  error: "TypeError: Cannot read properties of null (reading 'status')\n" +
+    '    at Xu.findElementByXPath (/Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6632129)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async /Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6652471\n' +
+    '    at async /Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6652353',
+  stepName: 'User action click occured'
+}
+[2023-05-19 15:31:12.260] [info]  {
+  stepName: 'User action input occured',
+  locator: 'xpath',
+  path: '//INPUT[@id="user_email_login"]'
+}
+[2023-05-19 15:31:14.434] [info]  { status: 'passed', stepName: 'User action input occured' }
+[2023-05-19 15:31:14.457] [info]  {
+  stepName: 'User action click occured',
+  locator: 'xpath',
+  path: '//INPUT[@id="user_password"]'
+}
+[2023-05-19 15:31:17.964] [info]  { status: 'passed', stepName: 'User action click occured' }
+[2023-05-19 15:31:18.061] [info]  {
+  stepName: 'User action input occured',
+  locator: 'xpath',
+  path: '//INPUT[@id="user_password"]'
+}
+[2023-05-19 15:31:19.354] [info]  { status: 'passed', stepName: 'User action input occured' }
+[2023-05-19 15:31:19.466] [info]  {
+  stepName: 'User action click occured',
+  locator: 'xpath',
+  path: '//INPUT[@id="user_submit"]'
+}
+[2023-05-19 15:31:22.009] [info]  { status: 'passed', stepName: 'User action click occured' }
+[2023-05-19 15:31:42.061] [error] {
+  status: 'failed',
+  error: '{}',
+  stepName: 'User action click occured'
+}
+[2023-05-19 15:31:42.064] [error] {
+  status: 'failed',
+  error: "TypeError: Cannot read properties of null (reading 'status')\n" +
+    '    at Xu.findElementByXPath (/Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6632129)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async /Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6652471\n' +
+    '    at async /Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6652353',
+  stepName: 'User action click occured'
+}
+[2023-05-19 15:31:52.425] [error] {
+  status: 'failed',
+  error: '{}',
+  stepName: 'User action click occured'
+}
+[2023-05-19 15:31:52.433] [error] {
+  status: 'failed',
+  error: "TypeError: Cannot read properties of null (reading 'status')\n" +
+    '    at Xu.findElementByXPath (/Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6632129)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async /Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6652471\n' +
+    '    at async /Applications/Low Code No Code.app/Contents/Resources/app/.webpack/main/index.js:2:6652353',
+  stepName: 'User action click occured'
+}

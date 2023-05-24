@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #ddd;
+    }
+  </style>
+  <title>Not Present in DOM</title>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="not-present-in-dom.html">Not Present in DOM</a></li>
+    <li><a href="not-present-in-ui.html">Not Present in UI</a></li>
+    <li><a href="unstable-element.html">Unstable Element</a></li>
+    <li><a href="disabled-element.html">Disabled Element</a></li>
+    <li><a href="event-receiving-element.html">Event Receiving Element</a></li>
+    <li><a href="xhrrequest.html">XHR Element</a></li>
+  </ul>
+  <div id="delayedContent"></div>
+
+  <script>
+    function myFunction() {
+      alert("I am an alert box!");
+    }
+    function addDelayedElement() {
+      var inputHTML = '<input type="text" placeholder="Enter your name">';
+      var buttonHTML = '<button onclick="myFunction()">Submit</button>';
+
+      var container = document.getElementById('delayedContent');
+      container.innerHTML += inputHTML + buttonHTML;
+    }
+    // 25 seconds set 
+    var delay = 25000;
+    setTimeout(addDelayedElement, delay);
+  </script>
+
+</body>
+</html>

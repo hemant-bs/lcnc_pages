@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Not Present in UI</title>
+  <style>
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #ddd;
+    }
+
+    #hiddenElement {
+      display: none;
+    }
+    .visible-element {
+      margin-bottom: 10px;
+    }
+
+    .hidden-element {
+      display: none;
+    }
+
+    .scroll-element {
+      margin-bottom: 2000px;
+      visibility: hidden;
+    }
+
+    .scroll-element.visible {
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="not-present-in-dom.html">Not Present in DOM</a></li>
+    <li><a href="not-present-in-ui.html">Not Present in UI</a></li>
+    <li><a href="unstable-element.html">Unstable Element</a></li>
+    <li><a href="disabled-element.html">Disabled Element</a></li>
+    <li><a href="event-receiving-element.html">Event Receiving Element</a></li>
+    <li><a href="xhrrequest.html">XHR Element</a></li>
+  </ul>
+  
+  <h2>Not Present in UI</h2>
+  <div id="hiddenElement">This element is hidden but available in the DOM.</div>
+
+  <br>
+  <div class="visible-element">
+    <label for="textbox">Visible Textbox:</label>
+    <input type="text" id="textbox" name="textbox">
+  </div>
+
+  <div class="visible-element hidden-element">
+    <button id="hiddenButton">Hidden Button</button>
+  </div>
+
+  <input type="text" placeholder="dummy" class="visible-element scroll-element">
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollElement = document.querySelector('.scroll-element');
+      var scrollPosition = window.scrollY + window.innerHeight;
+      var elementPosition = scrollElement.offsetTop + scrollElement.offsetHeight;
+
+      if (scrollPosition > elementPosition) {
+        scrollElement.classList.add('visible');
+      }
+    });
+  </script>
+</body>
+</html>
+
