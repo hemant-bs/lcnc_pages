@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Attributes Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    img {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    input[type="text"], input[type="email"], input[type="submit"] {
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 200px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+
+    form {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="not-present-in-dom.html">Not Present in DOM</a></li>
+    <li><a href="not-present-in-ui.html">Not Present in UI</a></li>
+    <li><a href="unstable-element.html">Unstable Element</a></li>
+    <li><a href="disabled-element.html">Disabled Element</a></li>
+    <li><a href="event-receiving-element.html">Event Receiving Element</a></li>
+    <li><a href="xhrrequest.html">XHR Element</a></li>
+    <li><a href="form_elements.html">Form Element</a></li>
+    <li><a href="all_elements.html">All elements</a></li>
+  </ul>
+  <h1 id="heading" class="main-heading">Welcome to the HTML Attributes Example</h1>
+
+  <p id="paragraph" class="content" data-custom-attribute="example" tabindex="0">This is a paragraph with various HTML attributes.</p>
+
+
+  <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Visit Example.com</a>
+
+  <input type="text" id="inputField" name="username" placeholder="Enter your username" required />
+
+  <button onclick="submitForm()">Submit</button>
+<br>
+
+  <table>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+    <tr>
+      <td data-cell-id="1">Cell 1</td>
+      <td data-cell-id="2">Cell 2</td>
+    </tr>
+  </table>
+
+  <form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" />
+    <br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" />
+    <br />
+    <input type="submit" value="Submit" />
+  </form>
+  
+  <script>
+    function submitForm() {
+      // Functionality for form submission
+      console.log('Form submitted');
+    }
+  </script>
+  <div class="container">
+    <a href="https://www.browserstack.com" target="_blank" rel="noopener noreferrer">
+      <img src="img/sample.jpeg"  width="200" height="150" />
+        </a>
+    </div>
+
+  <div class="inner-container">
+    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
+      <img src="img/Pizigani_1367_Chart_10MB.jpeg"  width="200" height="150" />
+        </a>
+  </div>
+</body>
+</html>

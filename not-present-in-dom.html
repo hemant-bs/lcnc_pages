@@ -67,39 +67,29 @@
     <li><a href="form_elements.html">Form Element</a></li>
   </ul>
   <div class="container">
-    <form>
+    <!-- <form>
       <label for="delayInput">Delay (in seconds):</label>
       <input type="number" id="delayInput" name="delayInput" min="0" required>
       <button type="submit">Add Delayed Element</button>
-    </form>
+    </form> -->
   </div>
   <div id="delayedContent"></div>
 
   <script>
+
     function myFunction() {
       alert("I am an alert box!");
     }
-    function addDelayedElement(delay) {
+    function addDelayedElement() {
       var inputHTML = '<input type="text" placeholder="Enter your name">';
-      var buttonHTML = '<button>Submit</button>';
+      var buttonHTML = '<button onclick="myFunction()">Submit</button>';
 
       var container = document.getElementById('delayedContent');
       container.innerHTML += inputHTML + buttonHTML;
     }
-
-    // Submit event listener for the form
-    document.querySelector('form').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      // Get the delay value from the input
-      var delayInput = document.getElementById('delayInput');
-      var delay = parseInt(delayInput.value)*1000;
-
-      // Call the addDelayedElement function after the specified delay
-      setTimeout(function() {
-        addDelayedElement(delay);
-      }, delay);
-    });
+    // 10 seconds set 
+    var delay = 10000;
+    setTimeout(addDelayedElement, delay);
   </script>
 
 </body>
