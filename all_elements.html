@@ -95,6 +95,7 @@
     }
 
   </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
   <ul class="navbar">
@@ -115,7 +116,7 @@
 
   <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Visit Example.com</a>
 
-  <input type="text" id="inputField" name="username" placeholder="Enter your username" required />
+  <input type="text" id="inputField" name="username" placeholder="Enter your username" required autocomplete="off" autofocus />
 
   <button onclick="submitForm()">Submit</button>
 <br>
@@ -163,13 +164,13 @@
   <h3>main form </h3>
   <form id="myForm">
     <label for="name">Name:</label>
-    <input type="text" id="name" />
+    <input name="56"/>
 
     <label for="email">Email:</label>
-    <input type="email" id="emailid" />
+    <input type="email" id="emailid" name="temp@gmail.com" autofocus="off" />
 
     <label for="number">Number:</label>
-    <input type="number" id="numberid" />
+    <input name="45" />
 
     <label for="checkbox">Checkbox:</label>
     <input type="checkbox" id="checkboxid" />
@@ -206,8 +207,12 @@
   </form>
 
   <div id="output"></div>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script>
+    $(document).ready(function () {
+    $('#example').DataTable();
+    });
     function submitForm() {
       var form = document.getElementById('myForm');
       var outputDiv = document.getElementById('output');
