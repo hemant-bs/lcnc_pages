@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow DOM with Multiple Iframes</title>
+  <style>
+    /* Style for the shadow host */
+    #shadow-host {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    /* Style for the iframes */
+    .iframe-container {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Shadow host element -->
+<div id="shadow-host">
+  <!-- Shadow DOM container -->
+  <div id="shadow-container"></div>
+</div>
+
+<script>
+  // Get the shadow host and create a shadow DOM
+  const shadowHost = document.getElementById('shadow-host');
+  const shadowRoot = shadowHost.attachShadow({ mode: 'open' });
+
+  // Create and append multiple iframes to the shadow DOM container
+  for (let i = 1; i <= 3; i++) {
+    const iframeContainer = document.createElement('div');
+    iframeContainer.className = 'iframe-container';
+
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.example.com`; // Set the iframe source URL
+    iframe.width = '400';
+    iframe.height = '300';
+
+    iframeContainer.appendChild(iframe);
+    shadowRoot.appendChild(iframeContainer);
+  }
+</script>
+
+</body>
+</html>
+

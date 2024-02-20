@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Attributes Example</title>
+</head>
+<body>
+<div class="container">
+<div class="boxes">
+<div class="outer">
+
+<label for="dynamicInput1" data-label-type="data-test">Input with data-test attribute:</label>
+<input type="text" placeholder="data-test" data-test="dynamic-test-1234"><br>
+<!-- <input type="text" placeholder="data-test" data-test="dynamic-test-0981782"><br> -->
+
+
+
+
+
+
+
+<label for="dynamicInput4" data-label-type="all-attributes">Input with all attributes:</label>
+<input type="text"  placeholder="mixed" 
+    data-test="dynamic-test" data-test-id="dynamic-test-id" data-qa="dynamic-qa-hrr">
+<br>
+<!-- <input type="text"  placeholder="mixed" 
+    data-test="dynamic-test" data-test-id="dynamic-test-id" data-qa="dynamic-qa-njjfjbbf"> -->
+</div>
+</div>
+<label for="dynamicInput3" data-label-type="data-qa">Input with data-qa attribute:</label>
+<input type="text"  placeholder="data-qa" data-qa="dynamic-qa-5678"><br>
+<!-- <input type="text"  placeholder="data-qa" data-qa="dynamic-qa-123456789"><br> -->
+
+<label for="dynamicInput3" data-label-type="data-qa">Input with data-test-is attribute:</label>
+<input type="text"  placeholder="data-test-id" data-test-id="dynamic-test-id-0912"><br>
+<!-- <input type="text"  placeholder="data-test-id" data-test-id="dynamic-test-id-901928"><br> -->
+</div>
+<script>
+    // JavaScript code to dynamically change the ID attribute and generate a GUID
+    // window.onload = function () {
+    //     // Update input IDs and attributes
+    //     var dynamicIdPrefix = "dynamicId_";
+    //     var attributes = ["data-test", "data-test-id", "data-qa"];
+
+    //     for (var i = 1; i <= 4; i++) {
+    //         var inputElement = document.getElementById("dynamicInput" + i);
+    //         if (inputElement) {
+    //             inputElement.id = dynamicIdPrefix + Math.floor(Math.random() * 1000);;
+                
+    //             // Set dynamic attributes
+    //             attributes.forEach(function(attribute) {
+    //                 inputElement.setAttribute(attribute, "dynamic-" + attribute);
+    //             });
+
+    //             console.log("Input" + i + " ID attribute and dynamic attributes set.");
+    //         }
+    //     }
+    // };
+</script>
+
+</body>
+</html>
