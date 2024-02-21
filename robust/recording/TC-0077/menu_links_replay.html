@@ -1,0 +1,51 @@
+<!-- TC0077 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Menu Example</title>
+<style>
+  /* CSS for the navigation menu */
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .menu li {
+    float: left;
+  }
+
+  .menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .menu li a:hover {
+    background-color: #111;
+  }
+</style>
+</head>
+<body>
+
+<!-- Radio Buttons -->
+<label for="option1">
+  <input type="radio" id="option1" name="options" value="option1" onchange="alert('Option 1 selected!')"> Option 1
+</label><br>
+
+<label for="option2">
+  <input type="radio" id="option2" name="options" value="option2" onchange="alert('Option 2 selected!')"> Option 2
+</label><br>
+
+<label for="option3">
+  <input type="radio" id="option3" name="options" value="option3" onchange="alert('Option 3 selected!')"> Option 3
+</label><br>
+
+</body>
+</html>
