@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Four Nested Shadow Roots with Forms</title>
+    <style>
+        /* CSS for centering the forms */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #d2d4d5; /* Background color for the entire page */
+        }
+
+        /* CSS for styling the forms */
+        form {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            background-color: #b42364; /* Background color for the forms */
+            text-align: center;
+        }
+
+        /* CSS for displaying input values below each form */
+        .input-values {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input-value {
+            background-color: #ececec; /* Background color for input values */
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <my-outer-element target='iframeNestedShadowDOM'></my-outer-element>
+
+    <script>
+        // Define the outer custom element
+        customElements.define('my-outer-element', class extends HTMLElement {
+            constructor() {
+                super();
+
+                // Create the outer shadow root
+                const outerShadow = this.attachShadow({ mode: 'open' });
+
+                // Create a div inside the outer shadow root
+                const outerDiv = document.createElement('div');
+
+                // Create the first nested custom element
+                const nested1 = document.createElement('my-nested-element');
+                outerDiv.appendChild(nested1);
+
+                // Append the div to the outer shadow root
+                outerShadow.appendChild(outerDiv);
+
+                
+
+                // Append the form to the first nested shadow root
+                // outerShadow.appendChild(form1);
+
+                // outerShadow.appendChild(form2);
+            }
+        });
+
+        // Define the first nested custom element
+        customElements.define('my-nested-element', class extends HTMLElement {
+            constructor() {
+                super();
+
+                // Create the first nested shadow root
+                const nested1Shadow = this.attachShadow({ mode: 'open' });
+
+                // Create a form inside the first nested shadow root
+                const form1 = document.createElement('form');
+                form1.innerHTML = '<textarea type="text"></textarea><input type="submit" value="Submit">';
+
+                const form2 = document.createElement('form');
+                form2.innerHTML = '<button type="button">W3Schools</button>';
+
+                // Append the form to the first nested shadow root
+                nested1Shadow.appendChild(form1);
+                nested1Shadow.appendChild(form2);
+
+                // Listen for form submission
+                // form1.addEventListener('submit', (event) => {
+                //     event.preventDefault();
+                //     const inputValue = form1.querySelector('input').value;
+                //     this.displayHierarchyAndValue('my-nested-element', inputValue);
+                // });
+
+                // Create the second nested custom element
+                // const nested2 = document.createElement('my-nested-element-2');
+                // nested1Shadow.appendChild(nested2);
+            }
+
+            //Display the hierarchy and input value
+            displayHierarchyAndValue(elementName, inputValue) {
+                const inputValuesDiv = this.getRootNode().querySelector('.input-values');
+                const inputValueDiv = document.createElement('div');
+                inputValueDiv.className = 'input-value';
+                inputValueDiv.textContent = `${elementName}: ${inputValue}`;
+                inputValuesDiv.appendChild(inputValueDiv);
+            }
+        });
+    </script>
+    <div class="input-values"></div>
+</body>
+</html>
