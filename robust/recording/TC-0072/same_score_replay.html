@@ -1,0 +1,153 @@
+<!-- TC-0072 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #ddd;
+    }
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    /* #result {
+      margin-top: 20px;
+      font-size: 18px;
+    } */
+    .button2 {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .sibling {
+            padding: 20px;
+            border: 1px solid #000;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .peach {
+            background-color: peachpuff;
+        }
+  </style>
+  <title>Form elements</title>
+</head>
+<body>
+  <h2>Element</h2>
+  <ul class="navbar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="not-present-in-dom.html">Not Present in DOM</a></li>
+    <li><a href="not-present-in-ui.html">Not Present in UI</a></li>
+    <li><a href="unstable-element.html">Unstable Element</a></li>
+    <li><a href="disabled-element.html">Disabled Element</a></li>
+    <li><a href="event-receiving-element.html">Event Receiving Element</a></li>
+    <li><a href="xhrrequest.html">XHR Element</a></li>
+    <li><a href="form_elements.html" target="_blank">Form Element</a></li>
+    <li><a href="all_elements.html" target="_blank">All elements</a></li>
+  </ul>
+  <br>
+  <div class="new">
+  <div class="parent">
+    <h1>Parent Element</h1>
+    <button id="targetButton">Parent Button</button>
+    <p>This is the parent element.</p>
+    <button onclick="changeColor('sibling-2', 'peach')">Button2 </button>
+    <div class="child">
+      
+      <div class="sibling" id="sibling-1">
+        <input type="text" placeholder="Input Box 1" id="targetInput1">
+        <button onclick="changeColor('sibling-1', 'blue')">Button1</button>
+      </div>
+      <div class="sibling" id="sibling-2">
+        <input type="text" placeholder="Input Box 2" id="targetInput2">
+        <button onclick="changeColor('targetInput2', 'peach')">Button2 </button>
+      </div>
+    </div>
+  </div>
+  <div class="sibling" id="sibling-2">
+    <input type="text" placeholder="Input Box 3" id="targetInput3">
+    <button onclick="changeColor('targetInput3', 'peach')">Button3 </button>
+  </div>
+</div>
+<div class="sibling" id="sibling-2">
+  <input type="text" placeholder="Input Box 3" id="targetInput3">
+  <button onclick="changeColor('targetInput3', 'peach')">Button3 </button>
+</div>
+  <select name="cars" id="bikes">
+    <option value="vol">Volvo</option>
+    <option value="sb">Saab</option>
+    <option value="ol">Opel</option>
+    <option value="ai">Audi</option>
+  </select>
+
+  <select name="cars" id="cars">
+    <option value="vvo">Volvo</option>
+    <option value="sab">Saab</option>
+    <option value="opl">Opel</option>
+    <option value="adi">Audi</option>
+  </select>
+</div>
+  <script>
+    function displayInput() {
+      var input = document.getElementById("name").value;
+      var result = document.getElementById("result");
+      result.innerHTML = input;
+    }
+    function showAlert() {
+      alert("Button clicked!");
+    }
+    function changeColor(divId, color) {
+        const div = document.getElementById(divId);
+        div.classList.remove("blue", "peach");
+        div.classList.add(color);
+    }
+  </script>
+</body>
+</html>
