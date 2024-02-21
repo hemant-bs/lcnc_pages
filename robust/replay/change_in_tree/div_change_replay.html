@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+    <script type="text/JavaScript">
+        function showMessage1(){
+            var message = document.getElementById("fname").value;
+            display.innerHTML= message;
+        }
+    </script>
+
+
+  </head>
+<body>
+<div class="myDiv1">    
+
+</div>
+<div class="myDiv2">    
+  <form>
+    <label for="fname">First name:</label>
+    <textarea name="fname1"></textarea><br><br>
+    <label for="lname">Last name:</label>
+    <textarea name="fname2"></textarea><br><br>
+    <input type="button" value="Click Me Now" onclick="showMessage1();"><br><br>
+</form>
+<p> Your input: <span id = "display"></span> </p>
+<button type="button">W3Schools</button>  
+</div>
+</body>
+</html>
