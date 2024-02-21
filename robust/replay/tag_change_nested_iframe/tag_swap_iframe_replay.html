@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+    <script type="text/JavaScript">
+        function showMessage(){
+            var message = document.getElementById("fname").value;
+            display.innerHTML= message;
+        }
+    </script>
+
+
+  </head>
+<body>
+<form target="iframe1">
+  <label for="fname">First name:</label>
+  <textarea name="fname"></textarea><br><br>
+  <label for="lname">Last name:</label>
+  <textarea name="lname"></textarea><br><br>
+  <button type="button" onclick="showMessage();">Click Me</button><br><br>
+</form>
+<p> Your input: <span id = "display"></span> </p>
+<button type="button">W3Schools</button>
+</body>
+</html>
