@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Dropdown</title>
+  <style>
+    /* Styles for the select dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .dropdown-options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+      display: none;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-option {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .dropdown-option:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown-options.show {
+      display: block;
+    }
+
+    /* Style the select container */
+    .select-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="select-container">
+    <h1>Select your favorite car</h1>
+    <div class="dropdown" id="carsDropdown">
+      <div class="dropdown-select" onclick="toggleDropdown()">Select Car</div>
+      <div class="dropdown-options" id="carOptions">
+        <div class="dropdown-option" onclick="selectCar('volvo')">Volvo</div>
+        <div class="dropdown-option" onclick="selectCar('saab')">Saab</div>
+        <div class="dropdown-option" onclick="selectCar('mercedes')">Mercedes</div>
+        <div class="dropdown-option" onclick="selectCar('audi')">Audi</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      var dropdownOptions = document.getElementById("carOptions");
+      dropdownOptions.classList.toggle("show");
+    }
+
+    function selectCar(car) {
+      var dropdownSelect = document.getElementById("carsDropdown").getElementsByClassName("dropdown-select")[0];
+      dropdownSelect.innerText = car.charAt(0).toUpperCase() + car.slice(1);
+      toggleDropdown();
+    }
+  </script>
+</body>
+</html>
