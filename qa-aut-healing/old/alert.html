@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert with Options</title>
+</head>
+<body>
+  <button onclick="showAlert()">Show Alert</button>
+
+  <script>
+    function showAlert() {
+      const result = window.confirm("Do you want to proceed?");
+      if (result) {
+        alert("You clicked 'Yes'");
+      } else {
+        alert("You clicked 'No' or 'Cancel'");
+      }
+    }
+  </script>
+</body>
+</html>
