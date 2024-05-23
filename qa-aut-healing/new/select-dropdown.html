@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Dropdown</title>
+  <style>
+    /* Styles for the select dropdown */
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23000000'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position-x: 95%;
+      background-position-y: center;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+
+    /* Style the options */
+    select option {
+      padding: 10px;
+    }
+
+    /* Style the select container */
+    .select-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="select-container">
+    <h1>Select your favorite car</h1>
+    <select name="carModel" id="carModel">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+    <h1>Select your favorite Bus</h1>
+    <select name="busModel" id="busModel">
+      <option value="volvo">Volvo</option>
+      <option value="tata">Tata</option>
+      <option value="Ahsok">Ashok</option>
+      <option value="Jim">Jimmy</option>
+    </select>
+  </div>
+</body>
+</html>
