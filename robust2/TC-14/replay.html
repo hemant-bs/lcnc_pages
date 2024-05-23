@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Test Identity and Identity Values with SVG</title>
+</head>
+<body>
+    <h1>Dynamic Test Identity and Identity Values with SVG</h1>
+
+    <!-- Div containers for SVGs -->
+    <div id="svg-container-1" data-test-id="svg_123_yui_3_8_1_1_13679224741219_543"></div>
+    <div id="svg-container-2" data-test-id="ext-gen216_SVGGrid"></div>
+    <div id="svg-container-3" data-test-id="guid_ABC123"></div>
+    <div id="svg-container-4" data-test-id="SVGGrid-gVjGQiI-123"></div>
+
+    <script>
+        // SVG content as a string
+        var svgContent1 = `
+        <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" fill="red" />
+            <text x="30" y="55" font-family="Verdana" font-size="3" fill="white">SVG textj fjfjknfjnvfjnf</text>
+        </svg>
+        `;
+        
+        var svgContent2 = `
+            <svg viewBox="0 0 100 100">
+                <rect width="80" height="80" x="10" y="10" fill="green" />
+                <text x="30" y="55" font-family="Verdana" font-size="3" fill="white">SVG 2</text>
+            </svg>
+        `;
+        
+        var svgContent3 = `
+            <svg viewBox="0 0 100 100">
+                <ellipse cx="50" cy="50" rx="30" ry="20" fill="blue" />
+                <text x="30" y="55" font-family="Verdana" font-size="3" fill="white">SVG 3</text>
+            </svg>
+        `;
+        
+        var svgContent4 = `
+            <svg viewBox="0 0 100 100">
+                <polygon points="50,15 80,80 20,80" fill="purple" />
+                <text x="30" y="55" font-family="Verdana" font-size="3" fill="white">SVG 4</text>
+            </svg>
+        `;
+
+        // Add SVG content to the divs using innerHTML
+        document.getElementById('svg-container-1').innerHTML = svgContent1;
+        document.getElementById('svg-container-2').innerHTML = svgContent2;
+        document.getElementById('svg-container-3').innerHTML = svgContent3;
+        document.getElementById('svg-container-4').innerHTML = svgContent4;
+    </script>
+</body>
+</html>

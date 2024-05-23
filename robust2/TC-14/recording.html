@@ -1,0 +1,34 @@
+<!-- Verify for svg we capture innerrhtml attribute and its score is 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG with innerHTML</title>
+<style>
+    svg {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+
+<div id="svg-container"></div>
+
+<script>
+    // SVG content as a string
+    var svgContent = `
+        <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" fill="red" />
+            <text x="30" y="55" font-family="Verdana" font-size="3" fill="white">SVG textj fjfjknfjnvfjnf</text>
+        </svg>
+    `;
+
+    // Add SVG content to the div using innerHTML
+    document.getElementById('svg-container').innerHTML = svgContent;
+</script>
+
+</body>
+</html>
