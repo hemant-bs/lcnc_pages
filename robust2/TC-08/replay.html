@@ -1,0 +1,96 @@
+<!--  Find all elements of target element type(tag). 
+If you find only one element with Test Identity Attribute or Identity attribute matching, return the element 
+Try this with different types of tes-id attributes  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements with Data Attributes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .element-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form with Various Elements</h1>
+
+    <!-- Input Box -->
+    <div class="element-container">
+        <label for="inputBox" aria-label="Your Name">Your Name:</label>
+        <input type="text" id="inputBox" name="name" placeholder="Enter your name" aria-label="Your Name" title="Enter your full name"
+            data-test="inputBox" data-testid="inputBox" data-test-id="inputBox" data-ti="inputBox" data-cy="inputBox" data-qa="inputBox">
+
+            <input type="text" id="inputBox" name="name" placeholder="Enter your name" aria-label="Your Name" title="Enter your full name">
+    </div>
+
+    <!-- Select Box -->
+    <div class="element-container">
+        <label for="selectBox" aria-label="Choose an option">Choose an option:</label>
+        <select id="selectBox" name="options" aria-label="Choose an option" title="Select an option"
+            data-test="selectBox" data-testid="selectBox" data-test-id="selectBox" data-ti="selectBox" data-cy="selectBox" data-qa="selectBox">
+            <option value="" disabled selected>Select an option</option>
+            <option value="option1" data-test="option1" data-testid="option1" data-test-id="option1" data-ti="option1" data-cy="option1" data-qa="option1">Option 1</option>
+            <option value="option2" data-test="option2" data-testid="option2" data-test-id="option2" data-ti="option2" data-cy="option2" data-qa="option2">Option 2</option>
+            <option value="option3" data-test="option3" data-testid="option3" data-test-id="option3" data-ti="option3" data-cy="option3" data-qa="option3">Option 3</option>
+        </select>
+        <select id="selectBox" name="options" aria-label="Choose an option" title="Select an option"
+       >
+        <option value="" disabled selected>Select an option</option>
+        <option value="option1" data-test="option1" data-testid="option1" data-test-id="option1" data-ti="option1" data-cy="option1" data-qa="option1">Option 1</option>
+        <option value="option2" data-test="option2" data-testid="option2" data-test-id="option2" data-ti="option2" data-cy="option2" data-qa="option2">Option 2</option>
+        <option value="option3" data-test="option3" data-testid="option3" data-test-id="option3" data-ti="option3" data-cy="option3" data-qa="option3">Option 3</option>
+    </select>
+    </div>
+
+    <!-- Radio Buttons -->
+    <div class="element-container">
+        <fieldset>
+            <legend>Choose a gender:</legend>
+            <input type="radio" id="male" name="gender" value="male" aria-label="Male" 
+                data-test="male" data-testid="male" data-test-id="male" data-ti="male" data-cy="male" data-qa="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female" aria-label="Female" 
+                data-test="female" data-testid="female" data-test-id="female" data-ti="female" data-cy="female" data-qa="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other" aria-label="Other" 
+                data-test="other" data-testid="other" data-test-id="other" data-ti="other" data-cy="other" data-qa="other">
+            <label for="other">Other</label>
+        </fieldset>
+    </div>
+
+    <!-- Button -->
+    <div class="element-container">
+        <button type="submit" aria-label="Submit Form" title="Submit your information"
+            data-test="submitButton" data-testid="submitButton" data-test-id="submitButton" data-ti="submitButton" data-cy="submitButton" data-qa="submitButton">
+            Submit
+        </button>
+        <button type="submit" aria-label="Submit Form" title="Submit your information"
+            >
+            Submit
+        </button>
+    </div>
+
+    <!-- Anchor -->
+    <div class="element-container">
+        <a href="https://example.com" aria-label="Visit Example" title="Go to Example.com"
+            data-test="exampleLink" data-testid="exampleLink" data-test-id="exampleLink" data-ti="exampleLink" data-cy="exampleLink" data-qa="exampleLink">
+            Visit Example.com
+        </a>
+        <a href="https://example.com" aria-label="Visit Example" title="Go to Example.com"
+        >
+        Visit Example.com
+    </a>
+    </div>
+
+</body>
+</html>

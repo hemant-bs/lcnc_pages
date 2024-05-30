@@ -1,0 +1,96 @@
+<!-- Verify for Trustable attributes score is 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements with Various Attributes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Elements with Various Attributes</h1>
+
+    <!-- Input Box with attributes -->
+    <div id="input-container" >
+        <label for="inputBox">Your Name:</label>
+        <input type="text"  name="name" placeholder="Enter your name" autocomplete="on" maxlength="30" minlength="3" pattern="[A-Za-z\s]+" aria-label="Your Name" title="Enter your full name">
+        <input type="text"  name="nam" placeholder="Enter your" autocomplete="on" maxlength="30" minlength="3" pattern="[A-Za-z\s]+" aria-label="Your Name" title="Enter your full name">
+        <input type="text"  name="nam" placeholder="Enter your" autocomplete="on" maxlength="30" minlength="3" pattern="[A-Za-z\s]+" aria-label="Your Name" title="Enter your full name">
+
+    </div>
+
+    <!-- Select Box with attributes -->
+    <div id="select-container" >
+        <label for="selectBox">Choose an option:</label>
+        <select  name="options" aria-label="Choose an option" title="Select an option">
+            <option value="" disabled selected>Select an option</option>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+    </div>
+
+    <!-- Radio Buttons with attributes -->
+    <div id="radio-container" >
+        <legend>Choose a gender:</legend>
+        <input type="radio" id="male" name="gender" value="male" aria-label="Male" tabindex="1">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" aria-label="Female" tabindex="2">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other" aria-label="Other" tabindex="3">
+        <label for="other">Other</label>
+    </div>
+
+    <!-- Buttons with attributes -->
+    <div id="button-container">
+        <button type="submit" aria-label="Submit Form" title="Submit your information" tabindex="4">Submit</button>
+        <button type="button" aria-label="Cancel" title="Cancel your action" tabindex="5">Cancel</button>
+        <button type="button" aria-label="Info" title="More info" tabindex="6">Info</button>
+        <button type="button" aria-label="Help" title="Get help" tabindex="7">Help</button>
+    </div>
+
+    <!-- Anchors with attributes -->
+    <div id="anchor-container" >
+        <a href="https://www.example.com" aria-label="Example Site" title="Visit Example" tabindex="8">Example</a><br>
+        <a href="https://www.test.com" aria-label="Test Site" title="Visit Test" tabindex="9">Test</a><br>
+        <a href="https://www.demo.com" aria-label="Demo Site" title="Visit Demo" tabindex="10">Demo</a>
+    </div>
+
+    <!-- Form with attributes -->
+    <div id="form-container">
+        <form action="/submit" method="post" role="form" aria-label="User Form" autocomplete="on">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" maxlength="15" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="6" required><br>
+            <button type="submit" formaction="/custom-submit" formmethod="post">Custom Submit</button>
+        </form>
+    </div>
+
+    <!-- Image with attributes -->
+    <div id="image-container" data-test-id="image_1617">
+        <img src="https://www.example.com/image.jpg" alt="Example Image" aria-label="Example Image" title="Example" width="200" height="100">
+        <img src="https://www.example.com/image.jpg" alt="Example Ima" aria-label="Example23" title="Example Img" width="200" height="100">
+        <img src="https://www.example.com/image.jpg" alt="Example Image" aria-label="Examples" title="Example Image" width="200" height="100">
+    </div>
+
+    <!-- Video with attributes -->
+    <div id="video-container" data-test-id="video_1819">
+        <video src="https://www.example.com/video.mp4" controls allow="autoplay" aria-label="Example Video" title="Example Video" width="320" height="240">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
+</body>
+</html>

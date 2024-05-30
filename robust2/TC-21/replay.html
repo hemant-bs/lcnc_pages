@@ -1,0 +1,24 @@
+<!-- Verify For Data attributes except test attributes limit the equals/match check to first 200 characters --> 
+<!-- ask shyam exactly equals / match what is used -->
+<!-- Th should pass, chars are added after 200th char -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Attributes Example</title>
+</head>
+<body>
+    <!-- Example elements with data-* attributes -->
+    <div id="element1" data-info="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod ultrices odio, vitae maximus justo vestibulum at. Integer consequat tincidunt purus, nec rhoncus magna faucibus a.faucibus a.nte_123456"></div> <!-- _123456 -->
+
+    <p id="element2" data-details="Nulla facilisi. Sed vehicula, velit ut malesuada vestibulum, justo urna hendrerit justo, in fermentum lacus nulla in nisi. Sed nec dui auctor, volutpat turpis nec, facilisis purus.rpis nec, facil12345_0949444"></p> <!-- _0949444 -->
+
+    <span id="element3" data-description="kLfwvy5Ln5YvYzbno3HxFm1qED6OO5iF5OoNhfoHUSO6DEmhaTfxlcezbuXRjtjWeyOFWETbGBYgHh6iouBgrpqK0a1itT4Y2Qgx0bH6vrk2yrBHNhZRpQM1RMdvw2FQX31TaF0ls8mqgdeusyJnOdZian9jc3kwHiCshxZbCdujYZl6sXqAOwvwrVh74kJB9gWTX3Uf.,ldjdnjndjd"></span>   <!-- .,ldjdnjndjd -->
+
+    <div id="element4" data-category="Gr5sGGNrC70sBtCBS5weLTxgFpJbB5VYYOwjSUVZY1dUbr3Noy3JChwzMzDv25MnITTrNzPH6ga8w0RdkmwmbFEuk6fajnWglKqZetjwhm4UltKeLp74Lh4hHsifE9B1w7l3KLvMCNvYE8J9hKApRtM2qaIXDCf7Z1t9lLVAUZKS9dehEmcZHIWvCCP3gXTZlfsACXD5;'][mdkmdk]"></div> <!-- ;'][mdkmdk]-->
+
+    <ul id="element5" data-tags="z5422efQwvHaAflD1hM8Sq5LK3qKYvv58ipCSyF0nDJexcEatXJSgqLSA1SqC81HSeqBEqt6zWk7RVUo7iGqSKzcD4ySmSrwfic4rxuC44QiitfG94HWowncT6Tit9X3P482KAXRj2D1FEOgMcRTdlxKY3Wy4p1MvlF28nt7VjlUuQiKotQx6wB4tfj01lvKSTla7aIj.mkddk9836763"></ul> <!-- .mkddk9836763 -->
+
+</body>
+</html>

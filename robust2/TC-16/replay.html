@@ -1,0 +1,53 @@
+<!-- Verify In cases Test id & id attribute values are dynamic, instead of equals check, use contains check through out 
+the replay algorithm. The check should be for the static part identified -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Various Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form with Various Elements</h1>
+    
+    <!-- Select Box -->
+    <label for="selectBox">Choose an option:</label>
+    <select name="options"  id="selectbox_123_456_sel">
+        <option value="" disabled selected>Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <!-- Input Box -->
+    <label for="inputBox">Your Name:</label>
+    <input data-test="2345_testinput_hello_test">
+
+
+    <!-- Radio Buttons -->
+   
+        <legend>Choose a gender:</legend>
+        <input type="radio" data-test-id="male-jell" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" data-testi="female-23" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio"  data-cy="other" value="other">
+        <label for="other">Other</label>
+
+    <!-- Button -->
+    <button data-testid="buttoninput" >Submit</button>
+
+    <!-- Anchor tag -->
+    <a href="https://example.com" data-qa="exte-visit-45">Visit Example.com</a>
+</body>
+</html>

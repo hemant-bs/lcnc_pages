@@ -1,0 +1,25 @@
+<!-- Verify if element does not have any attributes then full CSS path or XPath should match if there is inner text, 
+  it has to match 
+It should fail because we will change xpath /css path -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select>
+    <option>1</option> 
+    <option>2</option> 
+    <option>3</option> 
+  </select>
+  <br>
+  <button>Submit_123</button> <!-- Changed -->
+  <br>
+  <input>
+  <br>
+ 
+  <a>Hello</a>
+</body>
+</html>

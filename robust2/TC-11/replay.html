@@ -1,0 +1,93 @@
+<!-- Verify for filter and sort only  
+elements with atleast 50% of recorded attributes from filter category present during recording matching -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Various Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form with Various Elements</h1>
+    
+    <!-- Select Box -->
+    <label for="selectBox">Choose an option:</label>
+    <select  name="options" aria-label="Choose an option" title="Select an option">
+        <option value="" disabled selected>Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <!-- Input Box -->
+    <label for="inputBox">Your Name:</label>
+    <input type="text"  name="name" placeholder="Enter your name" aria-label="Your Name" title="Enter your full name">
+    <input type="tel"  name="name" placeholder="Entered" aria-label="Your" title="Enter your full name"> <!-- not to be counted in for filter and sort -->
+    <input type="tel"  name="namess" placeholder="Enter your namess" aria-label="Your Namess" title="Enter your full namesss"><!-- not to be counted in for filter and sort -->
+    <input type="text"  name="name" placeholder="Enter your name" aria-label="Your" title="Enter your full name"><!-- should be counted-->
+    <input type="tel"  name="name" placeholder="Enter your name" aria-label="Your Name" title="Enter your name"><!-- should be counted-->
+
+
+    <!-- Radio Buttons -->
+   
+        <legend>Choose a gender:</legend>
+        <input type="radio"  name="gender" value="male" aria-label="Male">
+        <label for="male">Male</label><br>
+        <input type="radio"  name="gender" value="female" aria-label="Female">
+        <label for="female">Female</label><br>
+        <input type="radio"  name="gender" value="other" aria-label="Other">
+        <label for="other">Other</label>
+
+        <legend>Choose an option:</legend>
+        <input type="radio" name="option1" value="option1" aria-label="Option 1">
+        <label for="option1">Option 1</label><br>
+        <input type="radio" name="option1" value="option2" aria-label="Option 2">
+        <label for="option2">Option 2</label><br>
+        <input type="radio" name="option1" value="option3" aria-label="Option 3">
+        <label for="option3">Option 3</label>
+
+  
+      <!-- Set 3 -->
+
+          <legend>Choose a category:</legend>
+          <input type="radio" name="category" value="category1" aria-label="Category 1">
+          <label for="category1">Category 1</label><br>
+          <input type="radio" name="category" value="category2" aria-label="Category 2">
+          <label for="category2">Category 2</label><br>
+          <input type="radio" name="category" value="category3" aria-label="Category 3">
+          <label for="category3">Category 3</label>
+
+  
+      <!-- Set 4 -->
+          <legend>Choose a preference:</legend>
+          <input type="radio" name="preference" value="preference1" aria-label="Preference 1">
+          <label for="preference1">Preference 1</label><br>
+          <input type="radio" name="preference" value="preference2" aria-label="Preference 2">
+          <label for="preference2">Preference 2</label><br>
+          <input type="radio" name="preference" value="preference3" aria-label="Preference 3">
+          <label for="preference3">Preference 3</label>
+
+
+    <!-- Button -->
+    <button type="submit" aria-label="Submit Form" title="Submit your information">Submit</button>
+      <!-- Button 2 (50% Attributes Same) -->
+      <button type="submit" aria-label="Submit Form" title="Submit your feedback">Submit Feedback</button>
+
+      <!-- Button 3 (50% Attributes Same) -->
+      <button type="submit" aria-label="Submit Response" title="Submit your information">Send Response</button>
+  
+      <!-- Button 4 (Different Attributes) -->
+      <button type="reset" aria-label="Reset Form" title="Reset your information">Reset</button>
+
+</body>
+</html>

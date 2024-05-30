@@ -1,0 +1,14 @@
+| Category              | Attributes                                                                                                                                      | Score |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------                        |-------|
+| Test Identity         | data-test, data-testid, data-test-id, data-ti, data-cy, data-qa, <user configurable>                                                            | 1     |
+| Identity              | Id                                                                                                                                              | 1     |
+| Text attributes       | Text attributes, Title, placeholder, alt, label                                                                                                 | 1     |
+| SVG attribute         | innerHtml - only in case of SVG element.                                                                                                        | 1     |
+| Trustable attributes  | name, href, src, allow, autocomplete, form, formaction, formmethod, max, min, maxlength, minlength, pattern, role, slot, srcset, tabindex, type | 1     |
+| Display attributes    | class#, backgroundImage                                                                                                                         | 2     |
+| Aria Attributes       | aria-*                                                                                                                                          | 2     |
+| Data attributes       | data-*, except test attributes covered earlier                                                                                                  | 2     |
+| Size attributes       | fontWeight, fontStyle, textDecoration, offsetWidth, offsetHeight                                                                                | 2     |
+| Other                 | Depth (calculated as number of levels from root), autocapitalize, contenteditable, required                                                     | 2     |
+
+

@@ -1,0 +1,53 @@
+<!-- We have shuffled class names and the test should pass -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements with Multiple Classes</title>
+    <style>
+        /* Example styles for demonstration purposes */
+        .red {
+            color: red;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .large {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Radio button with multiple classes -->
+    <input type="radio" class="underline large red bold highlight"> Option 1<br><!-- shuffled class -->
+
+    <!-- Input field with multiple classes -->
+    <input type="text" class="underline bold italic"><br><!-- shuffled class -->
+
+    <!-- Select box with multiple classes -->
+    <select class="underline large red italic "><!-- shuffled class -->
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select><br>
+
+    <!-- Button with multiple classes -->
+    <button class="large red">Click me</button> <!-- missing class fail -->
+</body>
+</html>

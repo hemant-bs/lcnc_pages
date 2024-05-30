@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Four Nested Shadow Roots with Forms</title>
+    <style>
+        /* CSS for centering the forms */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #d2d4d5; /* Background color for the entire page */
+        }
+
+        /* CSS for styling the forms */
+        form {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            background-color: #b42364; /* Background color for the forms */
+            text-align: center;
+        }
+
+        /* CSS for displaying input values below each form */
+        .input-values {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input-value {
+            background-color: #ececec; /* Background color for input values */
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <my-outer-element></my-outer-element>
+
+    <script>
+        // Define the outer custom element
+        customElements.define('my-outer-element', class extends HTMLElement {
+            constructor() {
+                super();
+
+                // Create the outer shadow root
+                const outerShadow = this.attachShadow({ mode: 'open' });
+
+                // Create a div inside the outer shadow root
+                const outerDiv = document.createElement('div');
+
+                // Create the first nested custom element
+                const nested1 = document.createElement('my-nested-element');
+                outerDiv.appendChild(nested1);
+
+                // Append the div to the outer shadow root
+                outerShadow.appendChild(outerDiv);
+            }
+        });
+
+        // Define the first nested custom element
+        customElements.define('my-nested-element', class extends HTMLElement {
+            constructor() {
+                super();
+
+                // Create the first nested shadow root
+                const nested1Shadow = this.attachShadow({ mode: 'open' });
+
+                // Create a form inside the first nested shadow root
+                const form1 = document.createElement('form');
+                form1.innerHTML = '<input type="text"><button type="submit">Submit</button>';
+
+                // Append the form to the first nested shadow root
+                nested1Shadow.appendChild(form1);
+
+                // Listen for form submission
+                form1.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    const inputValue = form1.querySelector('input').value;
+                    this.displayHierarchyAndValue('my-nested-element', inputValue);
+                });
+
+                // Create the second nested custom element
+                const nested2 = document.createElement('my-nested-element-2');
+                nested1Shadow.appendChild(nested2);
+            }
+
+            // Display the hierarchy and input value
+            displayHierarchyAndValue(elementName, inputValue) {
+                const inputValuesDiv = this.getRootNode().querySelector('.input-values');
+                const inputValueDiv = document.createElement('div');
+                inputValueDiv.className = 'input-value';
+                inputValueDiv.textContent = `${elementName}: ${inputValue}`;
+                inputValuesDiv.appendChild(inputValueDiv);
+            }
+        });
+
+        // Define the second nested custom element (and others similarly)
+        customElements.define('my-nested-element-2', class extends HTMLElement {
+            constructor() {
+                super();
+
+                const nested2Shadow = this.attachShadow({ mode: 'open' });
+                const form2 = document.createElement('form');
+                form2.innerHTML = '<input type="text" placeholder="Form 2"><button type="submit">Submit</button>';
+                nested2Shadow.appendChild(form2);
+
+                form2.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    const inputValue = form2.querySelector('input').value;
+                    this.displayHierarchyAndValue('my-nested-element-2', inputValue);
+                });
+
+                const nested3 = document.createElement('my-nested-element-3');
+                nested2Shadow.appendChild(nested3);
+            }
+        });
+
+        customElements.define('my-nested-element-3', class extends HTMLElement {
+            constructor() {
+                super();
+
+                const nested3Shadow = this.attachShadow({ mode: 'open' });
+                const form3 = document.createElement('form');
+                form3.innerHTML = '<input type="text" placeholder="Form 3"><button type="submit">Submit</button>';
+                nested3Shadow.appendChild(form3);
+
+                form3.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    const inputValue = form3.querySelector('input').value;
+                    this.displayHierarchyAndValue('my-nested-element-3', inputValue);
+                });
+
+                const nested4 = document.createElement('my-nested-element-4');
+                nested3Shadow.appendChild(nested4);
+            }
+        });
+
+        customElements.define('my-nested-element-4', class extends HTMLElement {
+            constructor() {
+                super();
+
+                const nested4Shadow = this.attachShadow({ mode: 'open' });
+                const form4 = document.createElement('form');
+                form4.innerHTML = '<input type="text" placeholder="Form 4"><button type="submit">Submit</button>';
+                nested4Shadow.appendChild(form4);
+
+                form4.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    const inputValue = form4.querySelector('input').value;
+                    this.displayHierarchyAndValue('my-nested-element-4', inputValue);
+                });
+            }
+        });
+    </script>
+    <div class="input-values"></div>
+</body>
+</html>

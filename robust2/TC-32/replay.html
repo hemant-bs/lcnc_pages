@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    /* Styles for the login form */
+    #login-host {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #login-container {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Shadow DOM -->
+  <div id="login-host"></div>
+<!-- input email changed -->
+  <script>
+    // Create a shadow root
+    const shadowRoot = document.getElementById('login-host').attachShadow({ mode: 'open' });
+
+    // Create a template for the login form
+    const template = document.createElement('template');
+    template.innerHTML = `
+      <div id="login-container">
+        <form id="login-form">
+          <input type="email2" name="email" placeholder="Emails" required> 
+          <input type="password" name="password" placeholder="Password" required>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    `;
+
+    // Append the template content to the shadow root
+    shadowRoot.appendChild(template.content.cloneNode(true));
+
+    // Access the form and add event listener
+    const loginForm = shadowRoot.getElementById('login-form');
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = loginForm.elements['email'].value;
+      const password = loginForm.elements['password'].value;
+      // Perform login logic here
+      console.log("Email:", email);
+      console.log("Password:", password);
+      // You can send this data to a server for authentication
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!-- 
+Verify If there is no static part, ignore the attribute completely, do not fail any operation based on the value mismatch.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Various Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form with Various Elements</h1>
+    
+    <!-- Select Box -->
+    <label for="selectBox">Choose an option:</label>
+    <select name="options"  id="909_123">
+        <option value="" disabled selected>Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <!-- Input Box -->
+    <label for="inputBox">Your Name:</label>
+    <input data-test="2345_123">
+
+    <!-- Radio Buttons -->
+   
+        <legend>Choose a gender:</legend>
+        <input type="radio" data-test-id="23-56-66" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" data-testi="23-55666" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio"  data-cy="02" value="other">
+        <label for="other">Other</label>
+
+    <!-- Button -->
+    <button data-testid="093" >Submit</button>
+
+    <!-- Anchor tag -->
+    <a href="https://example.com" data-qa="450">Visit Example.com</a>
+</body>
+</html>

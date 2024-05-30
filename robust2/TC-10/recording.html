@@ -1,0 +1,79 @@
+<!-- Verify after finding crp 
+Taking CRP element as the root & scope, instead of body,
+
+find the target element starting from step 1
+
+Note: use the relative xpath in place of full xpath wherever full path is applicable -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements with Hierarchical Closest Reliable Parents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .crp {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form with Elements having Hierarchical Closest Reliable Parents</h1>
+
+    <!-- CRP for Input Box -->
+    <div class="crp" data-test-qa="crp-inputBox">
+        <div>
+            <div>
+                <label for="inputBox" aria-label="Your Name">Your Name:</label>
+                <input type="text" name="name" placeholder="Enter your name" aria-label="Your Name" title="Enter your full name">
+            </div>
+        </div>
+    </div>
+
+    <!-- CRP for Select Box -->
+    <div class="container">
+        <div class="crp" data-testid="crp-selectBox">
+            <div>
+                <label for="selectBox" aria-label="Choose an option">Choose an option:</label>
+                <select name="options" aria-label="Choose an option" title="Select an option">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- CRP for Button -->
+    <div class="wrapper">
+        <div>
+            <div class="crp" data-test="crp-submitButton">
+                <button type="submit" aria-label="Submit Form" title="Submit your information">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CRP for Anchor -->
+    <div class="link-container" data-test-id="crp-exampleLink">
+        <div class="nested">
+            <div class="crp">
+                <div>
+                    <a href="https://example.com" aria-label="Visit Example" title="Go to Example.com">Visit Example.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
