@@ -4,7 +4,7 @@
   <title>HTML Attributes Example</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      
       margin: 20px;
     }
 
@@ -93,13 +93,57 @@
       border: 1px solid #ccc;
       padding: 10px;
     }
+    .container {
+            position: relative;
+            width: 400px; /* Adjust this width to match your image's width */
+        }
+
+        .image {
+            width: 60%;
+            height: auto;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.7); /* Background color with transparency */
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .forecast {
+  margin: 0;
+  padding: 0.3rem;
+  background-color: #eee;
+}
+
+.forecast > h1,
+.day-forecast {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.day-forecast {
+  background: right/contain content-box border-box no-repeat url('/media/examples/rain.svg') white;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+
+    </style>
 
   </style>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 </head>
 <body>
   <ul class="navbar">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" target="_blank">Home</a></li>
     <li><a href="not-present-in-dom.html">Not Present in DOM</a></li>
     <li><a href="not-present-in-ui.html">Not Present in UI</a></li>
     <li><a href="unstable-element.html">Unstable Element</a></li>
@@ -116,42 +160,75 @@
 
   <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Visit Example.com</a>
 
-  <input type="text" id="inputField" name="username" placeholder="Enter your username" required autocomplete="off" autofocus />
-
-  <button onclick="submitForm()">Submit</button>
 <br>
 
   <table>
     <tr>
-      <th>Header 1</th>
       <th>Header 2</th>
+      <!-- <th>Header 35</th> -->
+      <!-- <th>Header 5</th> -->
     </tr>
     <tr>
-      <td data-cell-id="1">Cell 1</td>
+      <td data-cell-id="1">Cell 56</td>
       <td data-cell-id="2">Cell 2</td>
     </tr>
   </table>
+<p>56</p>
+<!-- <div class=bse-btn__text>Got it</div> -->
 
-  <form action="/submit" method="post">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" />
-    <br />
+  <form id="valueForm" action="#" method="post">
+    <label for="firstName">First Name:</label>
+     <input type="text" id="firstName" placeholder="hemant"><br> 
+   <!--<input type="text" id="firstName" placeholder="hemant" class="zzwe __jhdnj abce efgh"><br>  -->
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" required><br>
+
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" />
-    <br />
-    <input type="submit" value="Submit" />
-  </form>
-  
-  <script>
-    function submitForm() {
-      // Functionality for form submission
-      console.log('Form submitted');
-    }
-  </script>
+    <input type="email" id="email" required><br>
+
+    <label for="number"> Number: </label>
+    <input type="tel" id="number" name="number" required><br>
+
+    <button type="submit">Submit</button>
+
+    
+</form>
+<button class="xyzjej" onclick="appendClass(this)">Click me</button>
+   
+
+<div class=bse-btn__text>Got it</div>
+<div id="result" style="display: none;">
+  <h2>Entered Values:</h2>
+  <p><strong>First Name:</strong> <span id="displayFirstName"></span></p>
+  <p><strong>Last Name:</strong> <span id="displayLastName"></span></p>
+  <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+  <p><strong>Number:</strong> <span id="displayNumber"></span></p>
+</div>
+<script>
+  document.getElementById("valueForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get values from input fields
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const email = document.getElementById("email").value;
+      const number = document.getElementById("number").value;
+
+      // Display values
+      document.getElementById("displayFirstName").textContent = firstName;
+      document.getElementById("displayLastName").textContent = lastName;
+      document.getElementById("displayEmail").textContent = email;
+      document.getElementById("displayNumber").textContent = number;
+
+      // Show the result section
+      document.getElementById("result").style.display = "block";
+  });
+</script>
   <div class="container">
-    <a href="https://www.browserstack.com" target="_blank" rel="noopener noreferrer">
-      <img src="img/sample.jpeg"  width="200" height="150" />
-        </a>
+     <a href="https://www.browserstack.com" target="_blank" rel="noopener noreferrer">
+       <img src="img/sample.jpeg" alt="samm" width="200" height="150" />
+        </a> 
     </div>
 
   <div class="inner-container">
@@ -159,18 +236,26 @@
       <img src="img/Pizigani_1367_Chart_10MB.jpeg"  width="200" height="150" />
         </a>
   </div>
-
+  <div class="container">
+    <img class="image" src="img/sample.jpeg" alt="Your Image">
+    <div class="text-overlay">
+        Text on Image
+    </div>
+</div>
   <hr>
+
+
   <h3>main form </h3>
   <form id="myForm">
     <label for="name">Name:</label>
-    <input name="56"/>
+    <!-- <input name="name" class="abcd ijkl djndjnd __23321"/> -->
+    <!-- <input name="name" class="ijkl abcd ijkl ___   djndjnd"/> -->
 
     <label for="email">Email:</label>
-    <input type="email" id="emailid" name="temp@gmail.com" autofocus="off" />
+    <input type="email" id="emailid1234" name="email"/>
 
     <label for="number">Number:</label>
-    <input name="45" />
+    <input type="tel" id="number" name="number"/>
 
     <label for="checkbox">Checkbox:</label>
     <input type="checkbox" id="checkboxid" />
@@ -206,10 +291,23 @@
     <button type="button" onclick="submitForm()">Submit</button>
   </form>
 
-  <div id="output"></div>
-  
+  <div id="output">
+
+  </div>
+  <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-slyssw" tabindex="0" type="button" aria-label="Choose date, selected date is Aug 4, 1978"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CalendarIcon"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path></svg><span class="MuiTouchRipple-root css-w0pj6f"></span></button>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script>
+            window.onload = function() {
+            // Function to be executed after the entire page has loaded
+            function delayedFunction() {
+                // Your code here
+                console.log('Page fully loaded after delay');
+            }
+
+            // Set a delay (in milliseconds)
+            const delayTime = 5000; // Adjust the delay time as needed (2000 milliseconds = 2 seconds)
+            setTimeout(delayedFunction, delayTime);
+        };
     $(document).ready(function () {
     $('#example').DataTable();
     });
@@ -228,3 +326,9 @@
     }
   </script>
 
+<script>
+  function appendClass(element) {
+    // Append the new class to the button
+    element.className = 'xyzjej_Newclass';
+  }
+</script>
