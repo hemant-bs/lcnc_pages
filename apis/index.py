@@ -22,13 +22,13 @@ users = {
     "admin": "123"
 }
 
-allowed_ips = ['180.148.46.139']  # Add the IP addresses you want to allow
+# allowed_ips = ['180.148.46.139']  # Add the IP addresses you want to allow
 
-@app.before_request
-def restrict_ips():
-    client_ip = request.remote_addr
-    if client_ip not in allowed_ips:
-        abort(403) 
+# @app.before_request
+# def restrict_ips():
+#     client_ip = request.remote_addr
+#     if client_ip not in allowed_ips:
+#         abort(403) 
 
 # Verify the provided credentials
 @auth.verify_password
@@ -191,6 +191,16 @@ def extract_name(raw_data):
             return new_user_name
         except UnicodeDecodeError:
             return None
+        
+@app.route('/headers')
+def print_headers():
+    headers = request.headers
+    headers = dict(request.headers)
+    print("Request Headers:")
+    for header, value in headers.items():
+        print(f"{header}: {value}")
+    return jsonify(headers)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
